@@ -1,137 +1,189 @@
-html {
-  font-size: 24px;
-  font-family: sans-serif;
+/* 
+  Basic Wireframe Styles
+  Intended to show layout and structural intent before final styling and JS are applied.
+*/
+
+:root {
+    --wireframe-border: 2px dashed #999;
+    --wireframe-bg: #f9f9f9;
+    --wireframe-text: #666;
+    --accent-color: #ddd;
+    --font-family: sans-serif;
 }
 
 body {
-  padding: 0;
-  margin: 0;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    background-color: #eee;
+    color: #333;
+    line-height: 1.5;
 }
 
-.map-section {
-  position: relative;
-  width: 100%;
-  height: 50vh;
-  background-color: silver;
+.wireframe-header {
+    background-color: #fff;
+    padding: 2rem;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 2rem;
 }
 
-.map-search-controls {
-  display: flex;
-  box-sizing: border-box;
-  margin: 0;
-  border: none;
-  padding: 0.5rem;
-  width: 100%;
-  gap: 0.5rem;
-  justify-content: space-between;
-  position: relative;
-  z-index: 1;
+.wireframe-header h1 {
+    margin: 0.5rem 0;
+    font-size: 1.8rem;
 }
 
-.map-search-controls input {
-  box-sizing: border-box;
-  border: 1px solid gray;
-  border-radius: 4px;
-  font-size: 0.9rem;
-  font-family: monospace;
+.placeholder-text {
+    color: var(--wireframe-text);
+    background-color: var(--accent-color);
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
-[name="address-search"] {
-  background-image: url("../img/location.svg");
-  background-size: 1em;
-  background-repeat: no-repeat;
-  background-position: 98% center;
-  padding-right: 1.2em;
-  width: 60%
+.eyebrow {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
-[name="time-search"] {
-  width: 40%;
+.subtitle {
+    font-size: 1.1rem;
 }
 
-.map {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Layout container */
+.wireframe-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
-.bike-search-controls {
-  border: 0;
-  padding: 0.5rem;
-  display: flex;
-  justify-content: space-between
+.dashboard-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
-.station-list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+/* Mobile responsiveness for the dashboard grid */
+@media (max-width: 900px) {
+    .dashboard-layout {
+        grid-template-columns: 1fr;
+    }
 }
 
-.station-list .station {
-  display: grid;
-  grid-template-areas: "name             name"
-                        "blank           distance"
-                        "bikes-info      docks-info"
-                        "drop-off-info   pick-up-info"
-                        "details         details";
-  grid-template-columns: 1fr 1fr;
-
-  padding: 0.5rem;
-  border-bottom: 1px solid black;
+.wireframe-box {
+    background-color: #fff;
+    border: var(--wireframe-border);
+    padding: 1.5rem;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
 }
 
-.station-list .station:first-child {
-  border-top: 1px solid black;
+.wireframe-box h2 {
+    margin-top: 0;
+    font-size: 1.3rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.5rem;
 }
 
-.station .name {
-  grid-area: name;
-  font-weight: bold;
+/* Map specific placeholders */
+.map-placeholder {
+    width: 100%;
+    height: 400px;
+    background-color: #e5e5e5;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
 }
 
-.station .distance {
-  grid-area: distance;
-  justify-self: end;
-
-  font-size: 0.8em;
-  font-style: italic;
-  padding-bottom: 0.5rem
+.placeholder-label {
+    font-weight: bold;
+    color: #888;
+    font-size: 1.2rem;
 }
 
-.station .available-bikes {
-  grid-area: bikes-info;
+.wireframe-controls {
+    margin: 1rem 0;
 }
 
-.station .available-docks {
-  grid-area: docks-info;
-  text-align: right;
+.wireframe-btn {
+    background-color: #fff;
+    border: 1px solid #888;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-family: inherit;
 }
 
-.station .next-drop-off-est {
-  grid-area: drop-off-info;
+.wireframe-btn.small {
+    padding: 0.2rem 0.5rem;
+    font-size: 0.85rem;
 }
 
-.station .next-pick-up-est {
-  grid-area: pick-up-info;
-  text-align: right;
+/* Legend Placeholder */
+.legend-placeholder {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: var(--wireframe-bg);
 }
 
-.station .details {
-  grid-area: details;
-  justify-self: center;
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
 }
 
-.station .details .chart {
-  box-sizing: border-box;
-  margin-top: 0.5rem;
-  padding: 0.5rem;
-  width: 100%;
-  height: 4rem;
-  background-color: silver;
+.swatch {
+    width: 16px;
+    height: 16px;
+    background-color: #bbb;
+    border: 1px solid #888;
+}
 
+/* Profile specific placeholders */
+.profile-details-placeholder {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px dashed #ddd;
+}
+
+.detail-label {
+    font-weight: bold;
+}
+
+/* Table Placeholder */
+.wireframe-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.wireframe-table th, .wireframe-table td {
+    border: 1px solid #ccc;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+.wireframe-table th {
+    background-color: var(--wireframe-bg);
+    font-weight: bold;
+}
+
+/* Generic List */
+.wireframe-list {
+    padding-left: 1.5rem;
+    color: var(--wireframe-text);
 }

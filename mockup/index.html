@@ -1,77 +1,118 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Wireframe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="wireframe-header">
+        <div class="placeholder-text eyebrow">Project 2 wireframe draft</div>
+        <h1>Philadelphia firearm violence burden and community conditions</h1>
+        <div class="placeholder-text subtitle">Supporting evidence for municipal planning and community advocacy.</div>
+    </header>
 
-    <title>Bikeshare Station Availability Dashboard</title>
-    <link rel="stylesheet" href="css/styles.css">
-  </head>
+    <main class="wireframe-container">
+        <!-- Top Dashboard Section -->
+        <div class="dashboard-layout">
+            
+            <!-- Map Area -->
+            <section class="wireframe-box map-section">
+                <h2>Elevated burden: 2020–2022 → 2023–2025</h2>
+                <div class="placeholder-text">The same baseline benchmark applies to both periods...</div>
+                
+                <div class="wireframe-controls">
+                    <button class="wireframe-btn">Clear selection and reset map</button>
+                </div>
 
-  <body>
-    <main>
-      <section class="map-section">
-        <fieldset class="map-search-controls">
-          <input type="text" name="address-search" placeholder="Near..." aria-label="Search around an address or place">
-          <input type="time" name="time-search" aria-label="Search at a specific time...">
-        </fieldset>
+                <!-- Placeholder for the interactive Leaflet Map -->
+                <div class="map-placeholder">
+                    <span class="placeholder-label">[ Interactive Map Area ]</span>
+                </div>
 
-        <div class="map">Map</div>
-      </section>
+                <!-- Placeholder for the Map Legend -->
+                <div class="legend-placeholder">
+                    <div class="legend-item"><div class="swatch"></div> Persistent</div>
+                    <div class="legend-item"><div class="swatch"></div> Previous</div>
+                    <div class="legend-item"><div class="swatch"></div> Newly Elevated</div>
+                    <div class="legend-item"><div class="swatch"></div> Consistently Below</div>
+                </div>
+            </section>
 
-      <section class="station-list-section">
-        <fieldset class="bike-search-controls">
-          <label class="electric-bikes-only-label">
-            <input type="checkbox" name="electric-bikes-only">
-            🗲🗲🗲
-          </label>
+            <!-- Tract Profile Area (Side Panel) -->
+            <section class="wireframe-box profile-section">
+                <h2>Select a tract</h2>
+                <div class="placeholder-text">Counts are recorded firearm assault injuries...</div>
+                
+                <div class="profile-details-placeholder">
+                    <div class="detail-row"><span class="detail-label">Tract Name:</span> <span class="detail-value">---</span></div>
+                    <div class="detail-row"><span class="detail-label">Status:</span> <span class="detail-value">---</span></div>
+                    <div class="detail-row"><span class="detail-label">2020-2022 Count:</span> <span class="detail-value">---</span></div>
+                    <div class="detail-row"><span class="detail-label">2023-2025 Count:</span> <span class="detail-value">---</span></div>
+                    <div class="detail-row"><span class="detail-label">SVI Percentile:</span> <span class="detail-value">---</span></div>
+                </div>
+            </section>
 
-          <label class="min-battery-level-label">
-            🔋
-            <input type="range" name="min-battery-level" min="0" max="100" value="0">
-          </label>
-        </fieldset>
+        </div>
 
-        <ul class="station-list">
-          <li class="station" aria-expanded="false">
-            <header class="name">Welcome Park, NPS</header>
-            <span class="distance" title="Station distance from map center">0.2 mi</span>
-            <span class="available-bikes" title="Number of suitable bikes available at the station">4 bikes</span>
-            <span class="available-docks" title="Number of open docks available at the station">8 docks</span>
-            <span class="next-drop-off-est" title="Approximate time between drop offs of suitable bikes">(~10 min)</span>
-            <span class="next-pick-up-est" title="Approximate time between docks opening up">(~15 min)</span>
-          </li>
-          <li class="station" aria-expanded="true">
-            <header class="name">Long Station Name To See How It Behaves With Text Wrapping</header>
-            <span class="distance" title="Station distance from map center">0.2 mi</span>
-            <span class="available-bikes" title="Number of suitable bikes available at the station">4 bikes</span>
-            <span class="available-docks" title="Number of open docks available at the station">8 docks</span>
-            <span class="next-drop-off-est" title="Approximate time between drop offs of suitable bikes">(~10 min)</span>
-            <span class="next-pick-up-est" title="Approximate time between docks opening up">(~15 min)</span>
+        <!-- Bottom Table Section -->
+        <section class="wireframe-box table-section">
+            <h2>Tract selection and data alternative</h2>
+            <div class="placeholder-text">The full indicator set and precomputed group comparisons...</div>
+            
+            <table class="wireframe-table">
+                <thead>
+                    <tr>
+                        <th>Select</th>
+                        <th>GEOID</th>
+                        <th>Transition</th>
+                        <th>20-22 count</th>
+                        <th>23-25 count</th>
+                        <th>Poverty (%)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><button class="wireframe-btn small">Select</button></td>
+                        <td>42101000000</td>
+                        <td>Persistent</td>
+                        <td>12</td>
+                        <td>8</td>
+                        <td>25.4%</td>
+                    </tr>
+                    <tr>
+                        <td><button class="wireframe-btn small">Select</button></td>
+                        <td>42101000100</td>
+                        <td>Consistently Below</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>10.2%</td>
+                    </tr>
+                    <tr>
+                        <td><button class="wireframe-btn small">Select</button></td>
+                        <td>42101000200</td>
+                        <td>Previous</td>
+                        <td>15</td>
+                        <td>4</td>
+                        <td>18.9%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
-            <div class="details">
-              <div class="chart drop-off-time-chart">Distribution of time between drop-offs</div>
-              <div class="chart pick-up-time-chart">Distribution of time between pick-ups</div>
-            </div>
-          </li>
-          <li class="station" aria-expanded="false">
-            <header class="name">Welcome Park, NPS</header>
-            <span class="distance" title="Station distance from map center">0.2 mi</span>
-            <span class="available-bikes" title="Number of suitable bikes available at the station">4 bikes</span>
-            <span class="available-docks" title="Number of open docks available at the station">8 docks</span>
-            <span class="next-drop-off-est" title="Approximate time between drop offs of suitable bikes">(~10 min)</span>
-            <span class="next-pick-up-est" title="Approximate time between docks opening up">(~15 min)</span>
-          </li>
-          <li class="station" aria-expanded="false">
-            <header class="name">Welcome Park, NPS</header>
-            <span class="distance" title="Station distance from map center">0.2 mi</span>
-            <span class="available-bikes" title="Number of suitable bikes available at the station">4 bikes</span>
-            <span class="available-docks" title="Number of open docks available at the station">8 docks</span>
-            <span class="next-drop-off-est" title="Approximate time between drop offs of suitable bikes">(~10 min)</span>
-            <span class="next-pick-up-est" title="Approximate time between docks opening up">(~15 min)</span>
-          </li>
-        </ul>
-      </section>
+        <!-- Footer / Methods Section -->
+        <section class="wireframe-box methods-section">
+            <h2>Methods, sources and downloads</h2>
+            <div class="placeholder-text">Elevated burden means meeting or exceeding the fixed 2015–2019 upper-quartile ...tk</div>
+            <ul class="wireframe-list">
+                <li>Firearm injuries: PPD via OpenDataPhilly</li>
+                <li>Census ACS 2020–2024 five-year estimates</li>
+                <li>CDC/ATSDR SVI 2022 documentation</li>
+                <li>Download Links Placeholder</li>
+            </ul>
+        </section>
+
     </main>
-  </body>
+</body>
 </html>
