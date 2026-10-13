@@ -1,118 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Wireframe</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header class="wireframe-header">
-        <div class="placeholder-text eyebrow">Project 2 wireframe draft</div>
-        <h1>Philadelphia firearm violence burden and community conditions</h1>
-        <div class="placeholder-text subtitle">Supporting evidence for municipal planning and community advocacy.</div>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Philadelphia burden and community conditions — Project 2</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script type="module" src="js/index.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#tract-table">Skip map to tract table</a>
+    <header>
+      <p class="eyebrow">Project 2 - draft</p>
+      <h1>Philadelphia firearm-violence burden and community conditions</h1>
+      <!-- tk: explain the municipal/community audience, planning questions -->
+      <p>A dashboard in progress for Philadelphia’s municipal public health, housing, human services, and community development teams, and community advocates. Descriptive evidence, not a priority ranking.</p>
+      <p id="status" role="status">Loading R-exported data…</p>
+      <noscript>JavaScript is needed for the interactive views. Aggregate CSV downloads and methods are available below.</noscript>
     </header>
-
-    <main class="wireframe-container">
-        <!-- Top Dashboard Section -->
-        <div class="dashboard-layout">
-            
-            <!-- Map Area -->
-            <section class="wireframe-box map-section">
-                <h2>Elevated burden: 2020–2022 → 2023–2025</h2>
-                <div class="placeholder-text">The same baseline benchmark applies to both periods...</div>
-                
-                <div class="wireframe-controls">
-                    <button class="wireframe-btn">Clear selection and reset map</button>
-                </div>
-
-                <!-- Placeholder for the interactive Leaflet Map -->
-                <div class="map-placeholder">
-                    <span class="placeholder-label">[ Interactive Map Area ]</span>
-                </div>
-
-                <!-- Placeholder for the Map Legend -->
-                <div class="legend-placeholder">
-                    <div class="legend-item"><div class="swatch"></div> Persistent</div>
-                    <div class="legend-item"><div class="swatch"></div> Previous</div>
-                    <div class="legend-item"><div class="swatch"></div> Newly Elevated</div>
-                    <div class="legend-item"><div class="swatch"></div> Consistently Below</div>
-                </div>
-            </section>
-
-            <!-- Tract Profile Area (Side Panel) -->
-            <section class="wireframe-box profile-section">
-                <h2>Select a tract</h2>
-                <div class="placeholder-text">Counts are recorded firearm assault injuries...</div>
-                
-                <div class="profile-details-placeholder">
-                    <div class="detail-row"><span class="detail-label">Tract Name:</span> <span class="detail-value">---</span></div>
-                    <div class="detail-row"><span class="detail-label">Status:</span> <span class="detail-value">---</span></div>
-                    <div class="detail-row"><span class="detail-label">2020-2022 Count:</span> <span class="detail-value">---</span></div>
-                    <div class="detail-row"><span class="detail-label">2023-2025 Count:</span> <span class="detail-value">---</span></div>
-                    <div class="detail-row"><span class="detail-label">SVI Percentile:</span> <span class="detail-value">---</span></div>
-                </div>
-            </section>
-
+    <main>
+      <div class="dashboard">
+        <section aria-labelledby="map-title">
+          <h2 id="map-title">Elevated burden: 2020–2022 → 2023–2025</h2>
+          <p>The same baseline benchmark applies to both periods: <span id="benchmark">—</span> annualized firearm assault injuries per 10,000 resident population.</p>
+          <button id="reset" type="button" disabled>Clear selection and reset map</button>
+          <div id="map" aria-label="Philadelphia tract transition map" aria-describedby="map-help"></div>
+          <p id="map-help">Select a tract on the map, or use the tract buttons in the table. Table selection provides the same profile without needing the map.</p>
+          <p id="map-status" role="status"></p>
+          <ul id="legend" aria-label="Burden transition legend"></ul>
+        </section>
+        <section class="profile" aria-labelledby="profile-title">
+          <h2 id="profile-title">Select a tract</h2>
+          <p>Counts are recorded firearm assault injuries, including fatal and nonfatal injuries and excluding officer-involved shootings. Rates are annualized injuries per 10,000 resident population, measured by injury location—not individual risk or resident incidence.</p>
+          <dl id="profile-details"></dl>
+          <p>ACS measures use 2020–2024 estimates. SVI 2022 uses an earlier ACS window (2018–2022) and national rankings. SVI is not a firearm-violence score.</p>
+        </section>
+      </div>
+      <section aria-labelledby="table-title">
+        <h2 id="table-title">Tract selection and data alternative</h2>
+        <p>The full indicator set and precomputed group comparisons are in the downloads. Indicator controls and the comparison chart are the next implementation milestone.</p>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable tract table">
+          <table id="tract-table">
+            <caption>All tracts; select a tract to update its profile. Poverty is percent below the poverty threshold, ACS 2020–2024.</caption>
+            <thead><tr><th scope="col">Select tract</th><th scope="col">GEOID</th><th scope="col">Transition</th><th scope="col">2020–2022 count</th><th scope="col">2023–2025 count</th><th scope="col">Poverty (%)</th></tr></thead>
+            <tbody id="tract-rows"></tbody>
+          </table>
         </div>
-
-        <!-- Bottom Table Section -->
-        <section class="wireframe-box table-section">
-            <h2>Tract selection and data alternative</h2>
-            <div class="placeholder-text">The full indicator set and precomputed group comparisons...</div>
-            
-            <table class="wireframe-table">
-                <thead>
-                    <tr>
-                        <th>Select</th>
-                        <th>GEOID</th>
-                        <th>Transition</th>
-                        <th>20-22 count</th>
-                        <th>23-25 count</th>
-                        <th>Poverty (%)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><button class="wireframe-btn small">Select</button></td>
-                        <td>42101000000</td>
-                        <td>Persistent</td>
-                        <td>12</td>
-                        <td>8</td>
-                        <td>25.4%</td>
-                    </tr>
-                    <tr>
-                        <td><button class="wireframe-btn small">Select</button></td>
-                        <td>42101000100</td>
-                        <td>Consistently Below</td>
-                        <td>2</td>
-                        <td>1</td>
-                        <td>10.2%</td>
-                    </tr>
-                    <tr>
-                        <td><button class="wireframe-btn small">Select</button></td>
-                        <td>42101000200</td>
-                        <td>Previous</td>
-                        <td>15</td>
-                        <td>4</td>
-                        <td>18.9%</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <!-- Footer / Methods Section -->
-        <section class="wireframe-box methods-section">
-            <h2>Methods, sources and downloads</h2>
-            <div class="placeholder-text">Elevated burden means meeting or exceeding the fixed 2015–2019 upper-quartile ...tk</div>
-            <ul class="wireframe-list">
-                <li>Firearm injuries: PPD via OpenDataPhilly</li>
-                <li>Census ACS 2020–2024 five-year estimates</li>
-                <li>CDC/ATSDR SVI 2022 documentation</li>
-                <li>Download Links Placeholder</li>
-            </ul>
-        </section>
-
+      </section>
+      <section aria-labelledby="methods-title">
+        <h2 id="methods-title">Methods, sources and downloads</h2>
+        <!-- tk: explain what these comparisons can support, limitations, why community involvement matters -->
+        <p>Elevated burden means meeting the fixed 2015–2019 upper-quartile tract rate benchmark. “Below” does not mean no harm. Special-use and otherwise rate-ineligible tracts are retained as unavailable; their counts remain accessible.</p>
+        <p>Planned group comparisons describe the typical tract, not the typical resident. Small groups will show individual observations. ACS margins of error and differences between source vintages limit interpretation.</p>
+        <ul>
+          <li>Firearm assault injuries: Philadelphia Police Department’s Shooting Victims dataset via <a href="https://opendataphilly.org/datasets/shooting-victims/">OpenDataPhilly</a>, local extraction May 21, 2026.</li>
+          <li><a href="https://api.census.gov/data/2024/acs/acs5.html">Census ACS 2020–2024 five-year estimates</a>.</li>
+          <li><a href="https://www.atsdr.cdc.gov/place-health/media/pdfs/2025/01/SVI2022Documentation.pdf">CDC/ATSDR SVI 2022 documentation</a>; national tract release.</li>
+          <li><a href="data/tract_indicators.csv" download>Download tract indicators (CSV)</a> · <a href="data/group_summaries.csv" download>Download group summaries (CSV)</a> · <a href="data/metadata.json">Definitions and provenance (JSON)</a></li>
+        </ul>
+      </section>
     </main>
-</body>
+  </body>
 </html>
