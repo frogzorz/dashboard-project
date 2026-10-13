@@ -1,0 +1,1049 @@
+{
+  "generation_id": "20260920T015714Z",
+  "groups": [
+    {
+      "indicator": "age_65_plus",
+      "transition": "Consistently below",
+      "n_total": 240,
+      "n_valid": 240,
+      "n_missing": 0,
+      "median": 14.9849224222817,
+      "q25": 9.32068577118696,
+      "q75": 20.7633015404432
+    },
+    {
+      "indicator": "age_65_plus",
+      "transition": "Newly elevated",
+      "n_total": 1,
+      "n_valid": 1,
+      "n_missing": 0,
+      "median": null,
+      "q25": null,
+      "q75": null
+    },
+    {
+      "indicator": "age_65_plus",
+      "transition": "Persistently elevated",
+      "n_total": 71,
+      "n_valid": 71,
+      "n_missing": 0,
+      "median": 13.7186629526462,
+      "q25": 10.3813352251725,
+      "q75": 18.7670994598929
+    },
+    {
+      "indicator": "age_65_plus",
+      "transition": "Previously elevated",
+      "n_total": 75,
+      "n_valid": 75,
+      "n_missing": 0,
+      "median": 12.5291647223518,
+      "q25": 9.17272615510803,
+      "q75": 17.0123165281662
+    },
+    {
+      "indicator": "aian_nh",
+      "transition": "Consistently below",
+      "n_total": 240,
+      "n_valid": 240,
+      "n_missing": 0,
+      "median": 0,
+      "q25": 0,
+      "q75": 0
+    },
+    {
+      "indicator": "aian_nh",
+      "transition": "Newly elevated",
+      "n_total": 1,
+      "n_valid": 1,
+      "n_missing": 0,
+      "median": null,
+      "q25": null,
+      "q75": null
+    },
+    {
+      "indicator": "aian_nh",
+      "transition": "Persistently elevated",
+      "n_total": 71,
+      "n_valid": 71,
+      "n_missing": 0,
+      "median": 0,
+      "q25": 0,
+      "q75": 0
+    },
+    {
+      "indicator": "aian_nh",
+      "transition": "Previously elevated",
+      "n_total": 75,
+      "n_valid": 75,
+      "n_missing": 0,
+      "median": 0,
+      "q25": 0,
+      "q75": 0
+    },
+    {
+      "indicator": "asian_nh",
+      "transition": "Consistently below",
+      "n_total": 240,
+      "n_valid": 240,
+      "n_missing": 0,
+      "median": 6.99865039108556,
+      "q25": 2.9246736441003,
+      "q75": 14.1243044032657
+    },
+    {
+      "indicator": "asian_nh",
+      "transition": "Newly elevated",
+      "n_total": 1,
+      "n_valid": 1,
+      "n_missing": 0,
+      "median": null,
+      "q25": null,
+      "q75": null
+    },
+    {
+      "indicator": "asian_nh",
+      "transition": "Persistently elevated",
+      "n_total": 71,
+      "n_valid": 71,
+      "n_missing": 0,
+      "median": 0.85981308411215,
+      "q25": 0,
+      "q75": 2.26833800548567
+    },
+    {
+      "indicator": "asian_nh",
+      "transition": "Previously elevated",
+      "n_total": 75,
+      "n_valid": 75,
+      "n_missing": 0,
+      "median": 2.53485424588086,
+      "q25": 0.189971944098198,
+      "q75": 6.24398173728903
+    },
+    {
+      "indicator": "black_nh",
+      "transition": "Consistently below",
+      "n_total": 240,
+      "n_valid": 240,
+      "n_missing": 0,
+      "median": 13.0063213112495,
+      "q25": 5.75260330120749,
+      "q75": 33.1041953287764
+    },
+    {
+      "indicator": "black_nh",
+      "transition": "Newly elevated",
+      "n_total": 1,
+      "n_valid": 1,
+      "n_missing": 0,
+      "median": null,
+      "q25": null,
+      "q75": null
+    },
+    {
+      "indicator": "black_nh",
+      "transition": "Persistently elevated",
+      "n_total": 71,
+      "n_valid": 71,
+      "n_missing": 0,
+      "median": 79.9392097264438,
+      "q25": 36.2399271714118,
+      "q75": 89.5641899654337
+    },
+    {
+      "indicator": "black_nh",
+      "transition": "Previously elevated",
+      "n_total": 75,
+      "n_valid": 75,
+      "n_missing": 0,
+      "median": 62.3666343355965,
+      "q25": 37.5371468120066,
+      "q75": 85.3852423958338
+    },
+    {
+      "indicator": "hispanic",
+      "transition": "Consistently below",
+      "n_total": 240,
+      "n_valid": 240,
+      "n_missing": 0,
+      "median": 7.85391686685579,
+      "q25": 4.78768224402683,
+      "q75": 14.2199978576274
+    },
+    {
+      "indicator": "hispanic",
+      "transition": "Newly elevated",
+      "n_total": 1,
+      "n_valid": 1,
+      "n_missing": 0,
+      "median": null,
+      "q25": null,
+      "q75": null
+    },
+    {
+      "indicator": "hispanic",
+      "transition": "Persistently elevated",
+      "n_total": 71,
+      "n_valid": 71,
+      "n_missing": 0,
+      "median": 5.93439792835563,
+      "q25": 2.12830879665783,
+      "q75": 30.3416575283682
+    },
+    {
+      "indicator": "hispanic",
+      "transition": "Previously elevated",
+      "n_total": 75,
+      "n_valid": 75,
+      "n_missing": 0,
+      "median": 6.51455026455026,
+      "q25": 2.97811181434599,
+      "q75": 15.9372962678094
+    },
+    {
+      "indicator": "multiracial_nh",
+      "transition": "Consistently below",
+      "n_total": 240,
+      "n_valid": 240,
+      "n_missing": 0,
+      "median": 3.7333495787353,
+      "q25": 2.07093255266656,
+      "q75": 6.00948300381862
+    },
+    {
+      "indicator": "multiracial_nh",
+      "transition": "Newly elevated",
+      "n_total": 1,
+      "n_valid": 1,
+      "n_missing": 0,
+      "median": null,
+      "q25": null,
+      "q75": null
+    },
+    {
+      "indicator": "multiracial_nh",
+      "transition": "Persistently elevated",
+      "n_total": 71,
+      "n_valid": 71,
+      "n_missing": 0,
+      "median": 1.79461615154536,
+      "q25": 0.209844456876963,
+      "q75": 3.9940381601419
+    },
+    {
+      "indicator": "multiracial_nh",
+      "transition": "Previously elevated",
+      "n_total": 75,
+      "n_valid": 75,
+      "n_missing": 0,
+      "median": 2.76745146633622,
+      "q25": 0.837122995135936,
+      "q75": 4.57791843123599
+    },
+    {
+      "indicator": "nhpi_nh",
+      "transition": "Consistently below",
+      "n_total": 240,
+      "n_valid": 240,
+      "n_missing": 0,
+      "median": 0,
+      "q25": 0,
+      "q75": 0
+    },
+    {
+      "indicator": "nhpi_nh",
+      "transition": "Newly elevated",
+      "n_total": 1,
+      "n_valid": 1,
+      "n_missing": 0,
+      "median": null,
+      "q25": null,
+      "q75": null
+    },
+    {
+      "indicator": "nhpi_nh",
+      "transition": "Persistently elevated",
+      "n_total": 71,
+      "n_valid": 71,
+      "n_missing": 0,
+      "median": 0,
+      "q25": 0,
+      "q75": 0
+    },
+    {
+      "indicator": "nhpi_nh",
+      "transition": "Previously elevated",
+      "n_total": 75,
+      "n_valid": 75,
+      "n_missing": 0,
+      "median": 0,
+      "q25": 0,
+      "q75": 0
+    },
+    {
+      "indicator": "no_high_school",
+      "transition": "Consistently below",
+      "n_total": 240,
+      "n_valid": 240,
+      "n_missing": 0,
+      "median": 7.27430618528325,
+      "q25": 3.08755292348213,
+      "q75": 12.9751067771259
+    },
+    {
+      "indicator": "no_high_school",
+      "transition": "Newly elevated",
+      "n_total": 1,
+      "n_valid": 1,
+      "n_missing": 0,
+      "median": null,
+      "q25": null,
+      "q75": null
+    },
+    {
+      "indicator": "no_high_school",
+      "transition": "Persistently elevated",
+      "n_total": 71,
+      "n_valid": 71,
+      "n_missing": 0,
+      "median": 15.9060700044307,
+      "q25": 11.1214233862913,
+      "q75": 23.5782607552099
+    },
+    {
+      "indicator": "no_high_school",
+      "transition": "Previously elevated",
+      "n_total": 75,
+      "n_valid": 75,
+      "n_missing": 0,
+      "median": 13.9232673267327,
+      "q25": 9.08616435756311,
+      "q75": 19.7767849311243
+    },
+    {
+      "indicator": "no_vehicle",
+      "transition": "Consistently below",
+      "n_total": 240,
+      "n_valid": 240,
+      "n_missing": 0,
+      "median": 19.2033347999708,
+      "q25": 10.9402916132856,
+      "q75": 30.6354440149449
+    },
+    {
+      "indicator": "no_vehicle",
+      "transition": "Newly elevated",
+      "n_total": 1,
+      "n_valid": 1,
+      "n_missing": 0,
+      "median": null,
+      "q25": null,
+      "q75": null
+    },
+    {
+      "indicator": "no_vehicle",
+      "transition": "Persistently elevated",
+      "n_total": 71,
+      "n_valid": 71,
+      "n_missing": 0,
+      "median": 39.1472868217054,
+      "q25": 33.6105397961244,
+      "q75": 47.3490591185735
+    },
+    {
+      "indicator": "no_vehicle",
+      "transition": "Previously elevated",
+      "n_total": 75,
+      "n_valid": 75,
+      "n_missing": 0,
+      "median": 34.5829428303655,
+      "q25": 27.2898879102729,
+      "q75": 44.1152186094671
+    },
+    {
+      "indicator": "other_nh",
+      "transition": "Consistently below",
+      "n_total": 240,
+      "n_valid": 240,
+      "n_missing": 0,
+      "median": 0,
+      "q25": 0,
+      "q75": 0.851655656072942
+    },
+    {
+      "indicator": "other_nh",
+      "transition": "Newly elevated",
+      "n_total": 1,
+      "n_valid": 1,
+      "n_missing": 0,
+      "median": null,
+      "q25": null,
+      "q75": null
+    },
+    {
+      "indicator": "other_nh",
+      "transition": "Persistently elevated",
+      "n_total": 71,
+      "n_valid": 71,
+      "n_missing": 0,
+      "median": 0,
+      "q25": 0,
+      "q75": 0
+    },
+    {
+      "indicator": "other_nh",
+      "transition": "Previously elevated",
+      "n_total": 75,
+      "n_valid": 75,
+      "n_missing": 0,
+      "median": 0,
+      "q25": 0,
+      "q75": 0.51201845363437
+    },
+    {
+      "indicator": "poverty",
+      "transition": "Consistently below",
+      "n_total": 240,
+      "n_valid": 240,
+      "n_missing": 0,
+      "median": 12.3974959570683,
+      "q25": 7.96158213887239,
+      "q75": 19.5632499409272
+    },
+    {
+      "indicator": "poverty",
+      "transition": "Newly elevated",
+      "n_total": 1,
+      "n_valid": 1,
+      "n_missing": 0,
+      "median": null,
+      "q25": null,
+      "q75": null
+    },
+    {
+      "indicator": "poverty",
+      "transition": "Persistently elevated",
+      "n_total": 71,
+      "n_valid": 71,
+      "n_missing": 0,
+      "median": 33.6612021857923,
+      "q25": 26.018326952483,
+      "q75": 43.575313991356
+    },
+    {
+      "indicator": "poverty",
+      "transition": "Previously elevated",
+      "n_total": 75,
+      "n_valid": 75,
+      "n_missing": 0,
+      "median": 26.7497874752054,
+      "q25": 17.5753089420564,
+      "q75": 38.2921108118203
+    },
+    {
+      "indicator": "rent_burden",
+      "transition": "Consistently below",
+      "n_total": 240,
+      "n_valid": 240,
+      "n_missing": 0,
+      "median": 47.7936507936508,
+      "q25": 37.0471609816972,
+      "q75": 59.8965276455278
+    },
+    {
+      "indicator": "rent_burden",
+      "transition": "Newly elevated",
+      "n_total": 1,
+      "n_valid": 1,
+      "n_missing": 0,
+      "median": null,
+      "q25": null,
+      "q75": null
+    },
+    {
+      "indicator": "rent_burden",
+      "transition": "Persistently elevated",
+      "n_total": 71,
+      "n_valid": 70,
+      "n_missing": 1,
+      "median": 63.4642940157059,
+      "q25": 53.5950656486371,
+      "q75": 72.5024996341999
+    },
+    {
+      "indicator": "rent_burden",
+      "transition": "Previously elevated",
+      "n_total": 75,
+      "n_valid": 75,
+      "n_missing": 0,
+      "median": 59.1078066914498,
+      "q25": 48.9904318053591,
+      "q75": 68.8505494816745
+    },
+    {
+      "indicator": "svi_household",
+      "transition": "Consistently below",
+      "n_total": 240,
+      "n_valid": 240,
+      "n_missing": 0,
+      "median": 0.44905,
+      "q25": 0.079975,
+      "q75": 0.821
+    },
+    {
+      "indicator": "svi_household",
+      "transition": "Newly elevated",
+      "n_total": 1,
+      "n_valid": 1,
+      "n_missing": 0,
+      "median": null,
+      "q25": null,
+      "q75": null
+    },
+    {
+      "indicator": "svi_household",
+      "transition": "Persistently elevated",
+      "n_total": 71,
+      "n_valid": 70,
+      "n_missing": 1,
+      "median": 0.8789,
+      "q25": 0.6906,
+      "q75": 0.981375
+    },
+    {
+      "indicator": "svi_household",
+      "transition": "Previously elevated",
+      "n_total": 75,
+      "n_valid": 75,
+      "n_missing": 0,
+      "median": 0.8905,
+      "q25": 0.5968,
+      "q75": 0.955
+    },
+    {
+      "indicator": "svi_housing_transport",
+      "transition": "Consistently below",
+      "n_total": 240,
+      "n_valid": 240,
+      "n_missing": 0,
+      "median": 0.5724,
+      "q25": 0.417525,
+      "q75": 0.804525
+    },
+    {
+      "indicator": "svi_housing_transport",
+      "transition": "Newly elevated",
+      "n_total": 1,
+      "n_valid": 1,
+      "n_missing": 0,
+      "median": null,
+      "q25": null,
+      "q75": null
+    },
+    {
+      "indicator": "svi_housing_transport",
+      "transition": "Persistently elevated",
+      "n_total": 71,
+      "n_valid": 70,
+      "n_missing": 1,
+      "median": 0.6456,
+      "q25": 0.456925,
+      "q75": 0.7571
+    },
+    {
+      "indicator": "svi_housing_transport",
+      "transition": "Previously elevated",
+      "n_total": 75,
+      "n_valid": 75,
+      "n_missing": 0,
+      "median": 0.5956,
+      "q25": 0.3868,
+      "q75": 0.76245
+    },
+    {
+      "indicator": "svi_minority",
+      "transition": "Consistently below",
+      "n_total": 240,
+      "n_valid": 240,
+      "n_missing": 0,
+      "median": 0.6175,
+      "q25": 0.43585,
+      "q75": 0.796475
+    },
+    {
+      "indicator": "svi_minority",
+      "transition": "Newly elevated",
+      "n_total": 1,
+      "n_valid": 1,
+      "n_missing": 0,
+      "median": null,
+      "q25": null,
+      "q75": null
+    },
+    {
+      "indicator": "svi_minority",
+      "transition": "Persistently elevated",
+      "n_total": 71,
+      "n_valid": 71,
+      "n_missing": 0,
+      "median": 0.9469,
+      "q25": 0.91675,
+      "q75": 0.98025
+    },
+    {
+      "indicator": "svi_minority",
+      "transition": "Previously elevated",
+      "n_total": 75,
+      "n_valid": 75,
+      "n_missing": 0,
+      "median": 0.9346,
+      "q25": 0.8487,
+      "q75": 0.9692
+    },
+    {
+      "indicator": "svi_overall",
+      "transition": "Consistently below",
+      "n_total": 240,
+      "n_valid": 240,
+      "n_missing": 0,
+      "median": 0.6015,
+      "q25": 0.3139,
+      "q75": 0.774775
+    },
+    {
+      "indicator": "svi_overall",
+      "transition": "Newly elevated",
+      "n_total": 1,
+      "n_valid": 1,
+      "n_missing": 0,
+      "median": null,
+      "q25": null,
+      "q75": null
+    },
+    {
+      "indicator": "svi_overall",
+      "transition": "Persistently elevated",
+      "n_total": 71,
+      "n_valid": 70,
+      "n_missing": 1,
+      "median": 0.89415,
+      "q25": 0.797475,
+      "q75": 0.9517
+    },
+    {
+      "indicator": "svi_overall",
+      "transition": "Previously elevated",
+      "n_total": 75,
+      "n_valid": 75,
+      "n_missing": 0,
+      "median": 0.8737,
+      "q25": 0.77755,
+      "q75": 0.93145
+    },
+    {
+      "indicator": "svi_socioeconomic",
+      "transition": "Consistently below",
+      "n_total": 240,
+      "n_valid": 240,
+      "n_missing": 0,
+      "median": 0.56,
+      "q25": 0.256275,
+      "q75": 0.764725
+    },
+    {
+      "indicator": "svi_socioeconomic",
+      "transition": "Newly elevated",
+      "n_total": 1,
+      "n_valid": 1,
+      "n_missing": 0,
+      "median": null,
+      "q25": null,
+      "q75": null
+    },
+    {
+      "indicator": "svi_socioeconomic",
+      "transition": "Persistently elevated",
+      "n_total": 71,
+      "n_valid": 70,
+      "n_missing": 1,
+      "median": 0.8969,
+      "q25": 0.834975,
+      "q75": 0.939525
+    },
+    {
+      "indicator": "svi_socioeconomic",
+      "transition": "Previously elevated",
+      "n_total": 75,
+      "n_valid": 75,
+      "n_missing": 0,
+      "median": 0.8358,
+      "q25": 0.7262,
+      "q75": 0.9231
+    },
+    {
+      "indicator": "under_18",
+      "transition": "Consistently below",
+      "n_total": 240,
+      "n_valid": 240,
+      "n_missing": 0,
+      "median": 18.5755896561523,
+      "q25": 11.8690164554269,
+      "q75": 23.1554599581655
+    },
+    {
+      "indicator": "under_18",
+      "transition": "Newly elevated",
+      "n_total": 1,
+      "n_valid": 1,
+      "n_missing": 0,
+      "median": null,
+      "q25": null,
+      "q75": null
+    },
+    {
+      "indicator": "under_18",
+      "transition": "Persistently elevated",
+      "n_total": 71,
+      "n_valid": 71,
+      "n_missing": 0,
+      "median": 22.8667038482989,
+      "q25": 18.3222882634884,
+      "q75": 28.6147155463953
+    },
+    {
+      "indicator": "under_18",
+      "transition": "Previously elevated",
+      "n_total": 75,
+      "n_valid": 75,
+      "n_missing": 0,
+      "median": 24.0521327014218,
+      "q25": 16.5141426820969,
+      "q75": 28.9299433055339
+    },
+    {
+      "indicator": "unemployment",
+      "transition": "Consistently below",
+      "n_total": 240,
+      "n_valid": 240,
+      "n_missing": 0,
+      "median": 5.69844916042975,
+      "q25": 3.39473651278329,
+      "q75": 8.82483632125516
+    },
+    {
+      "indicator": "unemployment",
+      "transition": "Newly elevated",
+      "n_total": 1,
+      "n_valid": 1,
+      "n_missing": 0,
+      "median": null,
+      "q25": null,
+      "q75": null
+    },
+    {
+      "indicator": "unemployment",
+      "transition": "Persistently elevated",
+      "n_total": 71,
+      "n_valid": 71,
+      "n_missing": 0,
+      "median": 12.5932062966031,
+      "q25": 7.03927220320663,
+      "q75": 17.6377417629757
+    },
+    {
+      "indicator": "unemployment",
+      "transition": "Previously elevated",
+      "n_total": 75,
+      "n_valid": 75,
+      "n_missing": 0,
+      "median": 9.37904269081501,
+      "q25": 5.84741942754113,
+      "q75": 13.2671289371684
+    },
+    {
+      "indicator": "white_nh",
+      "transition": "Consistently below",
+      "n_total": 240,
+      "n_valid": 240,
+      "n_missing": 0,
+      "median": 51.8470956981384,
+      "q25": 29.5757497484521,
+      "q75": 71.1136904008216
+    },
+    {
+      "indicator": "white_nh",
+      "transition": "Newly elevated",
+      "n_total": 1,
+      "n_valid": 1,
+      "n_missing": 0,
+      "median": null,
+      "q25": null,
+      "q75": null
+    },
+    {
+      "indicator": "white_nh",
+      "transition": "Persistently elevated",
+      "n_total": 71,
+      "n_valid": 71,
+      "n_missing": 0,
+      "median": 4.38445935403339,
+      "q25": 1.43200406892327,
+      "q75": 11.3209142354837
+    },
+    {
+      "indicator": "white_nh",
+      "transition": "Previously elevated",
+      "n_total": 75,
+      "n_valid": 75,
+      "n_missing": 0,
+      "median": 8.31395348837209,
+      "q25": 3.23415484577304,
+      "q75": 25.9489265811014
+    }
+  ],
+  "references": [
+    {
+      "indicator": "age_65_plus",
+      "n_valid": 387,
+      "n_missing": 0,
+      "median": 13.956347986474
+    },
+    {
+      "indicator": "aian_nh",
+      "n_valid": 387,
+      "n_missing": 0,
+      "median": 0
+    },
+    {
+      "indicator": "asian_nh",
+      "n_valid": 387,
+      "n_missing": 0,
+      "median": 4.64632454923717
+    },
+    {
+      "indicator": "black_nh",
+      "n_valid": 387,
+      "n_missing": 0,
+      "median": 28.6106032906764
+    },
+    {
+      "indicator": "hispanic",
+      "n_valid": 387,
+      "n_missing": 0,
+      "median": 7.6613916101482
+    },
+    {
+      "indicator": "multiracial_nh",
+      "n_valid": 387,
+      "n_missing": 0,
+      "median": 3.38151077174802
+    },
+    {
+      "indicator": "nhpi_nh",
+      "n_valid": 387,
+      "n_missing": 0,
+      "median": 0
+    },
+    {
+      "indicator": "no_high_school",
+      "n_valid": 387,
+      "n_missing": 0,
+      "median": 9.95787054768288
+    },
+    {
+      "indicator": "no_vehicle",
+      "n_valid": 387,
+      "n_missing": 0,
+      "median": 26.7264573991031
+    },
+    {
+      "indicator": "other_nh",
+      "n_valid": 387,
+      "n_missing": 0,
+      "median": 0
+    },
+    {
+      "indicator": "poverty",
+      "n_valid": 387,
+      "n_missing": 0,
+      "median": 17.5050615168977
+    },
+    {
+      "indicator": "rent_burden",
+      "n_valid": 386,
+      "n_missing": 1,
+      "median": 53.8787105751392
+    },
+    {
+      "indicator": "svi_household",
+      "n_valid": 386,
+      "n_missing": 1,
+      "median": 0.7072
+    },
+    {
+      "indicator": "svi_housing_transport",
+      "n_valid": 386,
+      "n_missing": 1,
+      "median": 0.58315
+    },
+    {
+      "indicator": "svi_minority",
+      "n_valid": 387,
+      "n_missing": 0,
+      "median": 0.7904
+    },
+    {
+      "indicator": "svi_overall",
+      "n_valid": 386,
+      "n_missing": 1,
+      "median": 0.74015
+    },
+    {
+      "indicator": "svi_socioeconomic",
+      "n_valid": 386,
+      "n_missing": 1,
+      "median": 0.7393
+    },
+    {
+      "indicator": "under_18",
+      "n_valid": 387,
+      "n_missing": 0,
+      "median": 20.3196347031963
+    },
+    {
+      "indicator": "unemployment",
+      "n_valid": 387,
+      "n_missing": 0,
+      "median": 6.95266272189349
+    },
+    {
+      "indicator": "white_nh",
+      "n_valid": 387,
+      "n_missing": 0,
+      "median": 30.3891708967851
+    }
+  ],
+  "observations": [
+    {
+      "tract_geoid": "42101027401",
+      "indicator": "poverty",
+      "transition": "Newly elevated",
+      "value": 26.8996117581808
+    },
+    {
+      "tract_geoid": "42101027401",
+      "indicator": "unemployment",
+      "transition": "Newly elevated",
+      "value": 7.87992495309568
+    },
+    {
+      "tract_geoid": "42101027401",
+      "indicator": "no_high_school",
+      "transition": "Newly elevated",
+      "value": 38.1430868167203
+    },
+    {
+      "tract_geoid": "42101027401",
+      "indicator": "rent_burden",
+      "transition": "Newly elevated",
+      "value": 41.3333333333333
+    },
+    {
+      "tract_geoid": "42101027401",
+      "indicator": "no_vehicle",
+      "transition": "Newly elevated",
+      "value": 27.455919395466
+    },
+    {
+      "tract_geoid": "42101027401",
+      "indicator": "under_18",
+      "transition": "Newly elevated",
+      "value": 23.987798114254
+    },
+    {
+      "tract_geoid": "42101027401",
+      "indicator": "age_65_plus",
+      "transition": "Newly elevated",
+      "value": 14.7254575707155
+    },
+    {
+      "tract_geoid": "42101027401",
+      "indicator": "white_nh",
+      "transition": "Newly elevated",
+      "value": 3.49417637271215
+    },
+    {
+      "tract_geoid": "42101027401",
+      "indicator": "black_nh",
+      "transition": "Newly elevated",
+      "value": 33.9434276206323
+    },
+    {
+      "tract_geoid": "42101027401",
+      "indicator": "aian_nh",
+      "transition": "Newly elevated",
+      "value": 0
+    },
+    {
+      "tract_geoid": "42101027401",
+      "indicator": "asian_nh",
+      "transition": "Newly elevated",
+      "value": 42.2351636161952
+    },
+    {
+      "tract_geoid": "42101027401",
+      "indicator": "nhpi_nh",
+      "transition": "Newly elevated",
+      "value": 0
+    },
+    {
+      "tract_geoid": "42101027401",
+      "indicator": "other_nh",
+      "transition": "Newly elevated",
+      "value": 0
+    },
+    {
+      "tract_geoid": "42101027401",
+      "indicator": "multiracial_nh",
+      "transition": "Newly elevated",
+      "value": 0
+    },
+    {
+      "tract_geoid": "42101027401",
+      "indicator": "hispanic",
+      "transition": "Newly elevated",
+      "value": 20.3272323904603
+    },
+    {
+      "tract_geoid": "42101027401",
+      "indicator": "svi_overall",
+      "transition": "Newly elevated",
+      "value": 0.9502
+    },
+    {
+      "tract_geoid": "42101027401",
+      "indicator": "svi_socioeconomic",
+      "transition": "Newly elevated",
+      "value": 0.9224
+    },
+    {
+      "tract_geoid": "42101027401",
+      "indicator": "svi_household",
+      "transition": "Newly elevated",
+      "value": 0.9945
+    },
+    {
+      "tract_geoid": "42101027401",
+      "indicator": "svi_minority",
+      "transition": "Newly elevated",
+      "value": 0.9732
+    },
+    {
+      "tract_geoid": "42101027401",
+      "indicator": "svi_housing_transport",
+      "transition": "Newly elevated",
+      "value": 0.5388
+    }
+  ]
+}
