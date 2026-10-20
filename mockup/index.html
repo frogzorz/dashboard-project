@@ -12,8 +12,8 @@
   <body>
     <a class="skip-link" href="#tract-table">Skip map to tract table</a>
     <header>
-      <p class="eyebrow">Project 2 - draft</p>
-      <h1>Philadelphia firearm-violence burden and community conditions</h1>
+      <h1>Inequalities in firearm violence decline in Philadelphia</h1>
+      <p class="byline">By Jamie Song, MPH</p>
       <!-- tk: explain the municipal/community audience, planning questions -->
       <p>A dashboard in progress for Philadelphia’s municipal public health, housing, human services, and community development teams, and community advocates. Descriptive evidence, not a priority ranking.</p>
       <nav aria-label="Dashboard sections">
@@ -50,20 +50,20 @@
               <button id="address-submit" type="submit">Find tract</button>
               <button id="address-clear" type="button">Clear address</button>
             </fieldset>
-            <p id="address-privacy">Sent to the <a href="https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html">U.S. Census Bureau</a> for lookup, not saved by this dashboard.</p>
-            <p id="address-help">Confirm the returned address; matches are approximate. Selecting a match clears tract filters.</p>
+            <p id="address-privacy">Address is sent to the <a href="https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html">U.S. Census Bureau</a> for lookup.</p>
+            <p id="address-help">Be sure to confirm the returned address since matches are approximate.</p>
             <p id="address-status" role="status" aria-live="polite" aria-atomic="true"></p>
             <ul id="address-results" aria-label="Matched addresses"></ul>
           </form>
           <button id="reset" type="button" disabled>Clear selection and reset map</button>
           <div id="map" aria-label="Philadelphia tract transition map" aria-describedby="map-help"></div>
-          <p id="map-help">Select a tract on the map, or use the tract buttons in the table. Table selection provides the same profile without needing the map.</p>
+          <p id="map-help">Select a tract on the map or use the tract buttons in the table.</p>
           <p id="map-status" role="status"></p>
           <ul id="legend" aria-label="Burden transition legend"></ul>
         </section>
         <section class="profile" aria-labelledby="profile-title">
           <h2 id="profile-title">Select a tract</h2>
-          <p>Counts include fatal and nonfatal firearm assault injuries, excluding officer-involved shootings. Rates are annualized injuries per 10,000 resident population, measured by injury location, not individual risk or resident incidence.</p>
+          <p>Counts include fatal and nonfatal firearm assault injuries, excluding police-involved shootings. Rates are yearly injuries per 10,000 resident population.</p>
           <dl id="profile-details"></dl>
           <p>ACS measures use 2020–2024 estimates. SVI 2022 uses an earlier ACS window (2018–2022) and national rankings. SVI is not a firearm-violence score.</p>
         </section>
@@ -87,10 +87,10 @@
           </label>
           <button id="reset-filters" type="button" disabled>Reset filters</button>
         </div>
-        <p id="filter-help">Filters update the table and highlight matching map tracts. Category counts reflect the search, across all groups. Search matches part of a tract number or GEOID.</p>
+        <p id="filter-help">Filters update the table and highlight matching map tracts. Category counts reflect the searched topic across all groups.</p>
         <div id="category-pills" role="group" aria-label="Filter by burden transition"></div>
         <p id="filter-summary" role="status" aria-live="polite" aria-atomic="true">Waiting for exported data…</p>
-        <p>Totals cover injuries assigned to the displayed tracts, not unassigned records or citywide trends when filters are active. Unavailable rates do not remove recorded injury counts.</p>
+        <p>Totals cover injuries assigned to the displayed tracts, not unassigned records or citywide trends when filters are active.</p>
         <div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable tract table">
           <table id="tract-table">
             <caption id="tract-table-caption">Select a tract to update its profile. Poverty is percent below the poverty threshold, ACS 2020–2024.</caption>
@@ -130,7 +130,7 @@
           </select>
           <p id="comparison-method">Summaries are imported from the R workflow.</p>
           <p>ACS: American Community Survey, 2020–2024. SVI: Social Vulnerability Index, 2022, based on ACS 2018–2022. These are snapshots, not demographic trends.</p>
-          <p>Margins of error describe approximate sampling uncertainty.</p>
+          <p>Translucent bands show approximate 90% ACS sampling uncertainty, not variation between tracts. SVI has no margin of error available here.</p>
           <p>Example: 20% ± 2 percentage points gives an approximate range of 18%–22%.</p>
           <p>Unclassified tracts remain in the map and tract table but are excluded here.</p>
         </details>
@@ -151,8 +151,8 @@
       <section aria-labelledby="methods-title">
         <h2 id="methods-title">Methods, sources and downloads</h2>
         <!-- tk: explain what these comparisons can support, limitations, why community involvement matters -->
-        <p>Elevated burden means meeting the fixed 2015–2019 upper-quartile tract rate benchmark. “Below” does not mean no harm. Special-use and otherwise rate-ineligible tracts are retained as unavailable; their counts remain accessible.</p>
-        <p>The weighted view pools ACS counts within each measure’s population or household universe and averages SVI tract ranks using fixed ACS population weights. The typical-tract view gives every tract equal weight. Small groups, ACS margins of error, and differing source vintages limit interpretation.</p>
+        <p>Elevated burden means meeting the fixed 2015–2019 upper-quartile tract rate benchmark. “Below” does not mean no harm. Special-use and otherwise rate-ineligible tracts are retained as unavailable but their counts remain accessible.</p>
+        <p>The weighted view pools ACS counts within each measure’s population or household universe and averages SVI tract ranks using fixed ACS population weights. The typical-tract view gives every tract equal weight.</p>
         <ul>
           <li>Firearm assault injuries: Philadelphia Police Department’s Shooting Victims dataset via <a href="https://opendataphilly.org/datasets/shooting-victims/">OpenDataPhilly</a>, local extraction May 21, 2026.</li>
           <li><a href="https://api.census.gov/data/2024/acs/acs5.html">Census ACS 2020–2024 five-year estimates</a>.</li>
@@ -161,5 +161,8 @@
         </ul>
       </section>
     </main>
+    <footer class="course-credits" aria-label="Course credits">
+      <p>Created for MUSA 6110 - Fall 2026 - Professor Mjumbe Poe</p>
+    </footer>
   </body>
 </html>
