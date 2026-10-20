@@ -23,7 +23,7 @@
       <div aria-labelledby="guide-title">
         <h2 id="guide-title">How to use this dashboard</h2>
         <ul>
-          <li><a href="#map-title">Select a tract</a> to view its profile.</li>
+          <li><a href="#map-title">Find an address or select a tract</a> to view its profile.</li>
           <li><a href="#table-title">Search or filter</a> by tract or transition group.</li>
           <li><a href="#category-comparison">Choose a measure</a> to compare groups.</li>
         </ul>
@@ -36,6 +36,25 @@
         <section aria-labelledby="map-title">
           <h2 id="map-title">Elevated burden: 2020–2022 → 2023–2025</h2>
           <p>The same baseline benchmark applies to both periods: <span id="benchmark">Loading…</span> annualized firearm assault injuries per 10,000 resident population.</p>
+          <form id="address-form" aria-describedby="address-help address-privacy">
+            <fieldset id="address-controls" disabled>
+              <legend>Find a tract by street address</legend>
+              <div class="address-fields">
+                <label for="address-street">Philadelphia street address
+                  <input id="address-street" type="text" placeholder="e.g., 1400 John F Kennedy Blvd" maxlength="200" autocomplete="off" required>
+                </label>
+                <label for="address-zip" class="address-zip-field">ZIP code (optional)
+                  <input id="address-zip" type="text" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" autocomplete="off">
+                </label>
+              </div>
+              <button id="address-submit" type="submit">Find tract</button>
+              <button id="address-clear" type="button">Clear address</button>
+            </fieldset>
+            <p id="address-privacy">Sent to the <a href="https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html">U.S. Census Bureau</a> for lookup, not saved by this dashboard.</p>
+            <p id="address-help">Confirm the returned address; matches are approximate. Selecting a match clears tract filters.</p>
+            <p id="address-status" role="status" aria-live="polite" aria-atomic="true"></p>
+            <ul id="address-results" aria-label="Matched addresses"></ul>
+          </form>
           <button id="reset" type="button" disabled>Clear selection and reset map</button>
           <div id="map" aria-label="Philadelphia tract transition map" aria-describedby="map-help"></div>
           <p id="map-help">Select a tract on the map, or use the tract buttons in the table. Table selection provides the same profile without needing the map.</p>

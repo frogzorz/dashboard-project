@@ -135,5 +135,16 @@ export function initializeDashboard(data, map) {
     control.disabled = false;
   }
   renderFilteredViews();
-  return {selectTract};
+  const selectAddressTract = (geoid) => {
+    if (!byGeoid.has(geoid)) return false;
+    state.query = '';
+    state.transition = 'all';
+    search.value = '';
+    transition.value = 'all';
+    renderFilteredViews();
+    selectTract(geoid);
+    map?.focus(geoid);
+    return true;
+  };
+  return {selectTract, selectAddressTract};
 }
