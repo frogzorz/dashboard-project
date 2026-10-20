@@ -1,5 +1,5 @@
 {
-  "generation_id": "20260920T015714Z",
+  "generation_id": "20261019T235205Z",
   "title": "Philadelphia firearm-violence burden and community conditions",
   "geographic_vintage": "2020 Census tracts",
   "acs_vintage": "2020–2024",
@@ -282,5 +282,13 @@
     "svi_documentation": "https://www.atsdr.cdc.gov/place-health/media/pdfs/2025/01/SVI2022Documentation.pdf",
     "shootings": "Philadelphia Police Department via OpenDataPhilly"
   },
-  "limitations": ["Descriptive ecological comparisons, not causes or individual risk", "ACS and SVI windows differ and overlap; these are not longitudinal social measures", "SVI and ACS indicators overlap; not independent corroboration", "Small groups and ACS uncertainty limit interpretation", "SVI was developed for disaster vulnerability, not a firearm-violence priority score", "Unavailable burden tracts excluded from comparisons, retained in geometry", "National SVI ranks intentionally answer a national-reference question, not within-state standing"]
+  "limitations": ["Descriptive ecological comparisons, not causes or individual risk", "ACS and SVI windows differ and overlap; these are not longitudinal social measures", "SVI and ACS indicators overlap; not independent corroboration", "Small groups and ACS uncertainty limit interpretation", "SVI was developed for disaster vulnerability, not a firearm-violence priority score", "Unavailable burden tracts excluded from comparisons, retained in geometry", "National SVI ranks intentionally answer a national-reference question, not within-state standing", "Pooled ACS percentages and population-weighted mean SVI ranks answer different questions from unweighted tract medians", "Mean SVI ranks are relative neighborhood-context summaries, not official group ranks or individual vulnerability", "Pooled ACS MOEs approximate covariance; fixed population weights and differing source vintages add uncertainty"],
+  "population_comparison_definition": {
+    "acs": "100 * sum(numerator) / sum(denominator); population for age/race, each indicator's own universe otherwise",
+    "svi": "sum(national tract rank * positive fixed ACS 2020–2024 population) / sum(positive fixed population); descriptive mean rank, not an official aggregated SVI percentile",
+    "missingness": "Measure-specific complete numerator/denominator pairs or observed SVI with positive population; covered population and valid tract counts retained",
+    "uncertainty": "Approximate pooled ACS 90% MOE via root-sum-of-squares and subset-proportion/ratio fallback; no SVI MOE or tests of between-group differences",
+    "small_groups": "Point estimate retained with fewer-than-five warning; a one-tract group is a single observation",
+    "filter_behavior": "Full category summaries remain fixed when the browser searches or filters; active category is highlighted only"
+  }
 }

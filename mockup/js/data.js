@@ -1,6 +1,7 @@
 export const exportFiles = [
   'tracts.geojson', 'indicators.json', 'comparisons.json', 'metadata.json',
   'tract_indicators.csv', 'group_summaries.csv',
+  'population_group_summaries.csv',
 ];
 
 export function validateData(collection, indicators, comparisons, metadata) {
@@ -40,7 +41,49 @@ export function validateData(collection, indicators, comparisons, metadata) {
   if (records.size !== geoids.size * definitions.size) {
     throw new Error('Incomplete tract–indicator grid.');
   }
-  return {collection, indicators, comparisons, metadata, records, definitions};
+  const populationGroups = new Map();
+  const categoryProfiles = new Map();
+  if (!Array.isArray(comparisons.population_groups) ||
+      !Array.isArray(comparisons.category_profiles) ||
+      !metadata.population_comparison_definition) {
+    throw new Error('Population comparisons missing. Refresh the complete R export set.');
+  }
+  for (const profile of comparisons.category_profiles) {
+    if (!metadata.transition_groups.includes(profile.transition) ||
+        categoryProfiles.has(profile.transition) ||
+        !Number.isInteger(profile.n_tracts) || profile.n_tracts < 1 ||
+        !Number.isFinite(profile.total_population) || profile.total_population < 0 ||
+        profile.n_tracts !== collection.features.filter((f) => f.properties.transition === profile.transition).length) {
+      throw new Error('Invalid category population profile.');
+    }
+    categoryProfiles.set(profile.transition, profile);
+  }
+  for (const row of comparisons.population_groups) {
+    const key = `${row.transition}:${row.indicator}`;
+    const definition = definitions.get(row.indicator);
+    const profile = categoryProfiles.get(row.transition);
+    const isSVI = definition?.domain === 'SVI';
+    if (!definition || !profile || populationGroups.has(key) ||
+        row.generation_id !== generation || row.n_total !== profile.n_tracts ||
+        !Number.isInteger(row.n_valid) || row.n_valid < 0 || row.n_valid > row.n_total ||
+        row.n_missing !== row.n_total - row.n_valid ||
+        row.total_population !== profile.total_population ||
+        !Number.isFinite(row.covered_population) || row.covered_population < 0 || row.covered_population > row.total_population ||
+        (row.population_coverage_pct !== null && (!Number.isFinite(row.population_coverage_pct) || row.population_coverage_pct < 0 || row.population_coverage_pct > 100)) ||
+        (row.value !== null && (!Number.isFinite(row.value) || row.value < 0 || row.value > (isSVI ? 1 : 100))) ||
+        (row.n_valid === 0 && row.value !== null) || (row.n_valid > 0 && row.value === null) ||
+        (row.moe !== null && (!Number.isFinite(row.moe) || row.moe < 0 || isSVI)) ||
+        row.method !== (isSVI ? 'population_weighted_mean_tract_rank' : 'pooled_acs_percentage') ||
+        row.small_group !== (row.n_valid < 5)) {
+      throw new Error('Invalid population comparison record.');
+    }
+    populationGroups.set(key, row);
+  }
+  if (categoryProfiles.size !== metadata.transition_groups.length ||
+      populationGroups.size !== metadata.transition_groups.length * definitions.size) {
+    throw new Error('Incomplete population comparison grid.');
+  }
+  return {collection, indicators, comparisons, metadata, records, definitions, populationGroups, categoryProfiles};
 }
 
 async function loadJSON(filename) {
